@@ -30,7 +30,7 @@ def get_all_files_path(INPUT_DIR):
     return {"Path":all_files,"Filename":file_name}
 
 if __name__ == "__main__":
-    INPUT_DIR=r"C:\\dev\\projects\\git\\i_ocr\\src\\CHECKSUM 256BIT"
+    INPUT_DIR=r"C:\\Users\\Admin\\Desktop\\NAI"
     df=pd.DataFrame(get_all_files_path(INPUT_DIR))
     df["SHA512"]=df["Path"].apply(lambda x:generate_sha512_hash(x))
     df["count_SHA512"]=df["SHA512"].apply(lambda x:len(x))
